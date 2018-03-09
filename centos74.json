@@ -1,0 +1,71 @@
+{
+  "builders": [
+    {
+      "type": "hyperv-iso",
+      "vm_name": "centos74",
+      "temp_path": ".",
+      "iso_urls": [
+        "{{ user `iso_disk` }}",
+        "{{ user `iso_url`}}"
+      ],
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "disk_size": 81920,
+      "communicator": "ssh",
+      "ssh_username": "root",
+      "ssh_password": "password",
+      "ssh_timeout" : "4h",
+      "shutdown_timeout": "30m",
+      "shutdown_command": "echo 'password' | sudo -S shutdown -P now",
+      "ram_size": 2048,
+      "enable_dynamic_memory": "true",
+      "cpu": 2,
+      "generation": 2,
+      "switch_name": "{{user `switch_name`}}",
+      "vlan_id": "{{user `vlan_id`}}",
+      "http_directory": "http",
+      "boot_wait": "5s",
+      "boot_command": [
+        "c  setparams 'kickstart' <enter> linuxefi /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20x\\86_64 inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter> initrdefi /images/pxeboot/initrd.img<enter> boot<enter>"
+      ],
+      "guest_additions_mode": "disable",
+      "enable_secure_boot": false,
+      "output_directory": "centos74"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "files/100-balloon.rules",
+      "destination": "/etc/udev/rules.d/100-balloon.rules"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/packages.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/provisioners.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/optimize.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/vagrantSSH.sh"
+    }
+  ],
+  "variables": {
+    "iso_disk": "CentOS-7-x86_64-Everything-1708.iso",
+    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-Everything-1708.iso",
+    "iso_checksum_type": "sha256",
+    "iso_checksum": "8593f5a1631ebfb7581193a7b4ef96d44f500d3ceb49cc4cfbfd71d5698e4173",
+    "switch_name": "LANBridge",
+    "vlan_id": ""
+  }
+}

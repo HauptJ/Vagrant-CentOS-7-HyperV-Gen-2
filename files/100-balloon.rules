@@ -1,0 +1,4 @@
+# Enables Dynamic Memory with Hyper-V
+# Source: https://www.altaro.com/hyper-v/centos-linux-hyper-v/
+
+SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"

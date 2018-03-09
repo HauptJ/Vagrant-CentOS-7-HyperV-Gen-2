@@ -1,0 +1,6 @@
+/output-centos7
+/centos74
+/packer_cache
+/.vagrant
+*.iso
+*.box
