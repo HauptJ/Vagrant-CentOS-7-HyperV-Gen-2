@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "CentOS74"
-  config.vm.box_url = "file://CentOS74.box"
+  config.vm.box = "hauptj/CentOS74"
+  # config.vm.box_url = "file://CentOS74.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -60,9 +60,11 @@ Vagrant.configure("2") do |config|
   #
 
 	config.vm.provider "hyperv" do |hv|
-		hv.vmname = "centos74"
+		hv.vmname = "CentOS74"
+		# With nested virtualization at least 2 CPUs are needed
 		hv.cpus = "2"
-		hv.memory = "2048"
+		# With nested virtualization at least 4GB of memory is needed
+		hv.memory = "4096"
 	end
 
   # View the documentation for the provider you are using for more
@@ -71,13 +73,14 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-    config.vm.provision "shell", inline: <<-SHELL
-		yum update -y
-    # permit password authentication
-		sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
-    # permit root login
-    sed -i "s/.*PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
-    # restart sshd
-		systemctl restart sshd.service
-    SHELL
+  #  config.vm.provision "shell", inline: <<-SHELL
+  #	echo 'vagrant' | sudo -S yum update -y
+  #		su vagrant
+  #		# permit password authentication
+  #		echo 'vagrant' | sudo -S sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+  #		# permit root login
+  #		echo 'vagrant' | sudo -S sed -i "s/.*PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
+  #		# restart sshd
+  #		echo 'vagrant' | sudo -S systemctl restart sshd.service
+  #  SHELL
 end

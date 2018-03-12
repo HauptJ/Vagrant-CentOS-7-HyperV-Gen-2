@@ -1,7 +1,6 @@
 #!/bin/bash -eux
 
 # Source: https://github.com/rgl/centos-vagrant/blob/master/provision.sh
-
 # Install the insecure_private_key
 install -d -m 700 /home/vagrant/.ssh
 pushd /home/vagrant/.ssh

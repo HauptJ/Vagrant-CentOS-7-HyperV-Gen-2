@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "hyperv-iso",
-      "vm_name": "centos74",
+      "vm_name": "CentOS74",
       "temp_path": ".",
       "iso_urls": [
         "{{ user `iso_disk` }}",
@@ -13,12 +13,14 @@
       "disk_size": 81920,
       "communicator": "ssh",
       "ssh_username": "root",
-      "ssh_password": "password",
+      "ssh_password": "vagrant",
       "ssh_timeout" : "4h",
       "shutdown_timeout": "30m",
-      "shutdown_command": "echo 'password' | sudo -S shutdown -P now",
-      "ram_size": 2048,
-      "enable_dynamic_memory": "true",
+      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "ram_size": 4096,
+      "enable_mac_spoofing": "true",
+      "enable_dynamic_memory": "false",
+      "enable_virtualization_extensions": "true",
       "cpu": 2,
       "generation": 2,
       "switch_name": "{{user `switch_name`}}",
@@ -30,24 +32,14 @@
       ],
       "guest_additions_mode": "disable",
       "enable_secure_boot": false,
-      "output_directory": "centos74"
+      "output_directory": "CentOS74"
     }
   ],
   "provisioners": [
     {
-      "type": "file",
-      "source": "files/100-balloon.rules",
-      "destination": "/etc/udev/rules.d/100-balloon.rules"
-    },
-    {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "script": "scripts/packages.sh"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/provisioners.sh"
     },
     {
       "type": "shell",
@@ -61,10 +53,10 @@
     }
   ],
   "variables": {
-    "iso_disk": "CentOS-7-x86_64-Everything-1708.iso",
-    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-Everything-1708.iso",
+    "iso_disk": "CentOS-7-x86_64-DVD-1708.iso",
+    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.4.1708/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso",
     "iso_checksum_type": "sha256",
-    "iso_checksum": "8593f5a1631ebfb7581193a7b4ef96d44f500d3ceb49cc4cfbfd71d5698e4173",
+    "iso_checksum": "ec7500d4b006702af6af023b1f8f1b890b6c7ee54400bb98cef968b883cd6546",
     "switch_name": "LANBridge",
     "vlan_id": ""
   }

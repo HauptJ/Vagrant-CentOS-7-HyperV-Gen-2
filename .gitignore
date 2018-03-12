@@ -1,5 +1,4 @@
-/output-centos7
-/centos74
+/Centos74
 /packer_cache
 /.vagrant
 *.iso
