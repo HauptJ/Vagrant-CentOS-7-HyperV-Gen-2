@@ -12,9 +12,13 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
+  # Rename if you are builing this box with Packer.
   config.vm.box = "hauptj/CentOS74"
+  # Uncomment if you are building this box with Packer.
   # config.vm.box_url = "file://CentOS74.box"
+  # Optional, but necessary if you want to run a provisioner.
   config.ssh.username = "root"
+  # root user SSH password, you can uncomment this if you perfer password authentication
   # config.ssh.password = "vagrant"
 
   # Disable automatic box update checking. If you disable this, then
@@ -63,9 +67,9 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provider "hyperv" do |hv|
 		hv.vmname = "CentOS74"
-		# With nested virtualization at least 2 CPUs are needed
+		# With nested virtualization, at least 2 CPUs are needed.
 		hv.cpus = "2"
-		# With nested virtualization at least 4GB of memory is needed
+		# With nested virtualization, at least 4GB of memory is needed.
 		hv.memory = "4096"
 	end
 
@@ -75,6 +79,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+  # Optional, allows you to provision with Ansible locally
     config.vm.provision "shell", inline: <<-SHELL
   	yum update -y
     SHELL
