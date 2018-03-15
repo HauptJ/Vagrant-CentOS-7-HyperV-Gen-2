@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "hauptj/CentOS74"
   # config.vm.box_url = "file://CentOS74.box"
+  config.ssh.username = "root"
+  # config.ssh.password = "vagrant"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -73,14 +75,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  #  config.vm.provision "shell", inline: <<-SHELL
-  #	echo 'vagrant' | sudo -S yum update -y
-  #		su vagrant
-  #		# permit password authentication
-  #		echo 'vagrant' | sudo -S sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
-  #		# permit root login
-  #		echo 'vagrant' | sudo -S sed -i "s/.*PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
-  #		# restart sshd
-  #		echo 'vagrant' | sudo -S systemctl restart sshd.service
-  #  SHELL
+    config.vm.provision "shell", inline: <<-SHELL
+  	yum update -y
+    SHELL
 end
