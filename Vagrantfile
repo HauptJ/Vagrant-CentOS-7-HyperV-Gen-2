@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hauptj/CentOS74"
   # Uncomment if you are building this box with Packer.
   # config.vm.box_url = "file://CentOS74.box"
-  # Optional, but necessary if you want to run a provisioner.
+  # Optional if you wish to use root as the default user
   # config.ssh.username = "root"
   # root user SSH password, you can uncomment this if you perfer password authentication
   # config.ssh.password = "vagrant"
