@@ -10,6 +10,9 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  # Disable SMB Share
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   # Rename if you are builing this box with Packer.
