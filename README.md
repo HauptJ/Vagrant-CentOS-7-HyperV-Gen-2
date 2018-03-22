@@ -3,7 +3,7 @@
 This is a Hyper-V generation 2 box with UEFI enabled and GPT partitioning. It includes Git and Ansible for local provisioning.
 SELinux and firewall services are disabled by default.
 
-A group called `local` is in the Ansible inventory file `/etc/ansible/hosts` to be used for local provisioning. As of 22.3.2018, usage of the `root` user for provisioning is optional.
+A group called `local` is in the Ansible inventory file `/etc/ansible/hosts` to be used for local provisioning. As of `v22.3.2018`, usage of the `root` user for provisioning is optional.
 The password for the `root` user is `vagrant` and the infamous `insecure_private_key` is in `/root/.ssh/authorized_keys`.
 
 You can run Ansible locally on Windows hosts using the `shell` provisioner with `config.ssh.username = "root"` specified in the Vagrantfile.
