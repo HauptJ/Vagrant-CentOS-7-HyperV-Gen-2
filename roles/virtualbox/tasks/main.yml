@@ -13,15 +13,15 @@
     name: wget
     state: latest
 
-- name: Import VirtualBox repository key
-  shell: wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | rpm --import -
-  args:
-    chdir: /tmp/
-
-- name: Download Virtualbox Repository file
-  get_url:
-    url: https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo
-    dest: /etc/yum.repos.d/
+- name: Add VirtualBox Repository
+  yum_repository:
+    name: virtualbox
+    description: Oracle Linux / RHEL / CentOS-$releasever / $basearch - VirtualBox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch
+    enabled: yes
+    gpgcheck: yes
+    repo_gpgcheck: yes
+    gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
 
 - name: Install gcc and kernel-devel for VirtualBox
   yum:
