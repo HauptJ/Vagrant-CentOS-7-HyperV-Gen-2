@@ -37,4 +37,5 @@
     state: latest
 
 - name: Run VirtualBox setup script
-  script: /usr/lib/virtualbox/vboxdrv.sh setup
+  shell: /usr/lib/virtualbox/vboxdrv.sh setup
+  ignore_errors: true

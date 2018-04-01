@@ -106,12 +106,22 @@ Vagrant.configure("2") do |config|
   #git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
   #pushd Vagrant-CentOS-7-HyperV-Gen-2/
   # Run Ansible Playbook
+  #git checkout debug
   #ansible-playbook provision.yml
   #popd
   #chown -R vagrant:vagrant Vagrant-CentOS-7-HyperV-Gen-2/
 
     config.vm.provision "shell", inline: <<-SHELL
   	yum update -y
+    # setup VirtualBox
+    sudo /usr/lib/virtualbox/vboxdrv.sh setup
+    # Check Chef DK version
+  	chef --version
+  	# Check Virtualbox version
+  	echo 'VirtualBox Version: '
+  	VBoxManage --version
+  	# Check Vagrant version
+  	vagrant --version
     # provisioning commands go here
     SHELL
 end
