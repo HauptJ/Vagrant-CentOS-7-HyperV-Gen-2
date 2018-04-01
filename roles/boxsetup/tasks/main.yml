@@ -28,6 +28,7 @@
 
 - name: Run Vagrant user SSH config script vagrantSSH.sh
   script: /tmp/vagrantSSH.sh
+  ignore_errors: true
 
 - name: copy sudoers file
   copy:

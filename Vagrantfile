@@ -102,5 +102,12 @@ Vagrant.configure("2") do |config|
   # Optional, allows you to provision with Ansible locally
     config.vm.provision "shell", inline: <<-SHELL
   	yum update -y
+    #rm -r -f Vagrant-CentOS-7-HyperV-Gen-2/
+    #git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
+    #pushd Vagrant-CentOS-7-HyperV-Gen-2/
+    # Run Ansible Playbook
+    #ansible-playbook provision.yml
+    popd
+    chown -R vagrant:vagrant Vagrant-CentOS-7-HyperV-Gen-2/
     SHELL
 end
