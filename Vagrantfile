@@ -100,14 +100,18 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   # Optional, allows you to provision with Ansible locally
+
+  ##### Test Ansible Provisioning #####
+  #rm -r -f Vagrant-CentOS-7-HyperV-Gen-2/
+  #git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
+  #pushd Vagrant-CentOS-7-HyperV-Gen-2/
+  # Run Ansible Playbook
+  #ansible-playbook provision.yml
+  #popd
+  #chown -R vagrant:vagrant Vagrant-CentOS-7-HyperV-Gen-2/
+
     config.vm.provision "shell", inline: <<-SHELL
   	yum update -y
-    #rm -r -f Vagrant-CentOS-7-HyperV-Gen-2/
-    #git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
-    #pushd Vagrant-CentOS-7-HyperV-Gen-2/
-    # Run Ansible Playbook
-    #ansible-playbook provision.yml
-    popd
-    chown -R vagrant:vagrant Vagrant-CentOS-7-HyperV-Gen-2/
+    # provisioning commands go here
     SHELL
 end
