@@ -7,10 +7,7 @@
 
 $boxname = "hauptj/CentOS74"
 $vmname = "CentOS74"
-
-# NOTE: By default, at least 2 vcpus are required to compile OpenResty from source.
-# SEE: group_vars/all.yml.example
-# SEE: roles/ansible-role-openresty/defaults/main.yml
-$vcpus = "4"
-
+# With nested virtualization, at least 2 CPUs are needed.
+$vcpus = "2"
+# With nested virtualization, at least 4GB of memory is needed.
 $vmem  = "4096"
