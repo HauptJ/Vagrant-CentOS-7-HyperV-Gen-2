@@ -1,5 +1,21 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   15-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: Vagrantfile
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+# NOTE: Variable overrides are in ./config.rb
+require "yaml"
+require "fileutils"
+
+# Use a variable file for overrides:
+CONFIG = File.expand_path("config.rb")
+if File.exist?(CONFIG)
+  require CONFIG
+end
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -16,7 +32,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   # Rename if you are builing this box with Packer.
-  config.vm.box = "hauptj/CentOS74"
+  config.vm.box = $boxname
+  #config.vm.box_version = "22.3.18"
   # Uncomment if you are building this box with Packer.
   # config.vm.box_url = "file://CentOS74.box"
   # Optional if you wish to use root as the default user
@@ -69,11 +86,11 @@ Vagrant.configure("2") do |config|
   #
 
 	config.vm.provider "hyperv" do |hv|
-		hv.vmname = "CentOS74"
+		hv.vmname = $vmname
 		# With nested virtualization, at least 2 CPUs are needed.
-		hv.cpus = "2"
+		hv.cpus = $vcpus
 		# With nested virtualization, at least 4GB of memory is needed.
-		hv.memory = "4096"
+		hv.memory = $vmem
 	end
 
   # View the documentation for the provider you are using for more

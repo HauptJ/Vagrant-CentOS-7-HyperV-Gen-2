@@ -1,5 +1,13 @@
 #!/bin/bash -eux
 
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   15-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: vagrantSSH.sh
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+
 # Source: https://github.com/rgl/centos-vagrant/blob/master/provision.sh
 # Install the insecure_private_key
 # Vagrant user

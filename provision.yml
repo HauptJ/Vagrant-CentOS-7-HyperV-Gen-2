@@ -1,0 +1,20 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: provision.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+- name: Provisions VagrantBox with stuff
+  hosts: all
+  #strategy: debug
+  become: yes
+
+
+  roles:
+    - boxsetup
+    - ansible
+    - virtualbox
+    - vagrant
+    - chef

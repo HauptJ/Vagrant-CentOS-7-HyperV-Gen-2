@@ -1,0 +1,10 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: all.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+chef_ver: 2.5.3-1
+vagrant_ver: 2.0.3
+vb_ver: 5.2

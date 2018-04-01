@@ -1,0 +1,14 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+  # Installs Vagrant in Vagrant
+
+- name: Install Vagrant
+  yum:
+    name: https://releases.hashicorp.com/vagrant/{{ vagrant_ver }}/vagrant_{{ vagrant_ver}}_x86_64.rpm
+    state: present

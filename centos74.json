@@ -37,29 +37,9 @@
   ],
   "provisioners": [
     {
-      "type": "file",
-      "source": "files/sudoers",
-      "destination": "/etc/sudoers"
-    },
-    {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/packages.sh"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/provisioners.sh"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/optimize.sh"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/vagrantSSH.sh"
+      "script": "scripts/ansible.sh"
     }
   ],
   "variables": {

@@ -1,0 +1,19 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+  # Install Ansible
+
+- name: Install the latest version of Ansible
+  yum:
+    name: ansible
+    state: latest
+
+- name: Install the latest version of GIT
+  yum:
+    name: git
+    state: latest

@@ -1,5 +1,13 @@
 #!/bin/bash -eux
 
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   15-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: optimize.sh
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+
 # try to deal with broken centos UEFI in Hyper-V
 # Source: https://github.com/marcinbojko/hv-packer/blob/master/extra/files/gen2-centos/uefi.sh
 

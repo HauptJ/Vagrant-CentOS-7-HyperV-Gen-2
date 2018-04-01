@@ -1,0 +1,40 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+  # Tasks to install VirtualBox
+
+- name: Install wget
+  yum:
+    name: wget
+    state: latest
+
+- name: Import VirtualBox repository key
+  shell: wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | rpm --import -
+  args:
+    chdir: /tmp/
+
+- name: Download Virtualbox Repository file
+  get_url:
+    url: https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install gcc and kernel-devel for VirtualBox
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - gcc
+    - kernel-devel
+
+- name: Install Virtualbox {{ vb_ver }}
+  yum:
+    name: VirtualBox-5.2
+    state: latest
+
+- name: Run VirtualBox setup script
+  script: /usr/lib/virtualbox/vboxdrv.sh setup

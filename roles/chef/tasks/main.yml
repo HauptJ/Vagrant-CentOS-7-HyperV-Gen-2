@@ -1,0 +1,14 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+  # Installs Chef Dev Kit
+
+- name: Install Chef Dev Kit
+  yum:
+    name: https://packages.chef.io/files/stable/chefdk/2.5.3/el/7/chefdk-{{ chef_ver }}.el7.x86_64.rpm
+    state: present

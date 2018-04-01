@@ -1,0 +1,35 @@
+# @Author: Haupt Joshua <HauptJ>
+# @Date:   31-Mar-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   HauptJ
+# @Last modified time: 01-Apr-2018
+
+---
+  # Basic VagrantBox provisioning tasks
+
+- name: Update all packages
+  yum:
+    name: "*"
+    state: latest
+
+- name: Copy optimization script optimize.sh
+  copy:
+    src: scripts/optimize.sh
+    dest: /tmp/optimize.sh
+
+- name: Run optimization script optimize.sh
+  script: /tmp/optimize.sh
+
+- name: copy Vagrant user SSH config script vagrantSSH.sh
+  copy:
+    src: scripts/vagrantSSH.sh
+    dest: /tmp/vagrantSSH.sh
+
+- name: Run Vagrant user SSH config script vagrantSSH.sh
+  script: /tmp/vagrantSSH.sh
+
+- name: copy sudoers file
+  copy:
+    src: files/sudoers
+    dest: /etc/sudoers
