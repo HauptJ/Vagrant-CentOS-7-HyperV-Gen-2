@@ -8,7 +8,8 @@ The password for the `root` user is `vagrant` and the infamous `insecure_private
 
 You can run Ansible locally on Windows hosts using the `shell` provisioner with `config.ssh.username = "root"` specified in the Vagrantfile.
 
-[Vagrant Cloud](https://app.vagrantup.com/hauptj/boxes/CentOS74)
+[Vagrant Cloud Box without VirtualBox and Vagrant](https://app.vagrantup.com/hauptj/boxes/CentOS74)
+[Vagrant Cloud Box with VirtualBox and Vagrant](https://app.vagrantup.com/hauptj/boxes/CentOS74VB)
 
 Usage:
 ------

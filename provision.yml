@@ -2,8 +2,8 @@
 # @Date:   31-Mar-2018
 # @Email:  josh@hauptj.com
 # @Filename: provision.yml
-# @Last modified by:   HauptJ
-# @Last modified time: 01-Apr-2018
+# @Last modified by:   Haupt Joshua
+# @Last modified time: 08-Apr-2018
 
 ---
 - name: Provisions VagrantBox with stuff
@@ -14,8 +14,8 @@
 
   roles:
     - boxsetup
+    - editors
     - ansible
+    - chef
     - virtualbox
     - vagrant
-    - chef
-    - editors
