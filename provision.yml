@@ -17,5 +17,5 @@
     - editors
     - ansible
     - chef
-    - virtualbox
-    - vagrant
+    #- virtualbox
+    #- vagrant
