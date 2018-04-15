@@ -8,8 +8,6 @@ $boxdir=".\$($boxname)\"
 $boxpath=".\$($boxname).box"
 $zippath=".\$($boxname).zip"
 
-$garbage="*.tmp*"
-
 ##### Make sure everything is clean #####
 
 # Delete existing .box and .zip
@@ -23,7 +21,6 @@ packer build -force $configfile
 # Copy required files for Vagrant box
 cp ".\Vagrantfile" $boxdir
 cp ".\metadata.json" $boxdir
-cp ".\config.rb" $boxdir
 
 # Package the archive
 7z a $zippath "$($boxdir)*"
