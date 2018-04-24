@@ -13,10 +13,10 @@
     name: "*"
     state: latest
 
-- name: Install cifs-utils for Vagrant SMB
-  yum:
-    name: cifs-utils
-    state: latest
+#- name: Install cifs-utils for Vagrant SMB
+#  yum:
+#    name: cifs-utils
+#    state: latest
 
 - name: Copy optimization script optimize.sh
   copy:
