@@ -9,8 +9,7 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  # Disable SMB Share
-  config.vm.synced_folder ".", "/vagrant", disabled: true
+
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
@@ -74,7 +73,24 @@ Vagrant.configure("2") do |config|
 		hv.cpus = "2"
 		# With nested virtualization, at least 4GB of memory is needed.
 		hv.memory = "4096"
+    # Faster cloning and uses less disk space
+    hv.differencing_disk = true
 	end
+
+  # SMB Directory Sharing
+  unless File.exist?(".vagrant/machines/default/hyperv/action_provision")
+    config.vm.provision "shell", inline: <<-SHELL
+      yum install -y cifs-utils </dev/null
+    SHELL
+    config.vm.post_up_message = "VM is initialized but not ready.  Please run `vagrant reload` to finalize."
+  else
+    config.vm.synced_folder '.', '/vagrant', {
+      type: 'smb', mount_options: ['vers=3.0'],
+      smb_username: ENV['VAGRANT_SMB_USERNAME'],
+      smb_password: ENV['VAGRANT_SMB_PASSWORD']
+    }
+    config.vm.post_up_message = "Your VM is ready for use."
+  end
 
   # View the documentation for the provider you are using for more
   # information on available options.
