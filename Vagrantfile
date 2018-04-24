@@ -14,10 +14,10 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   # Rename if you are builing this box with Packer.
-  config.vm.box = "hauptj/CentOS74"
+  config.vm.box = "CentOS74"
   #config.vm.box_version = "22.3.18"
   # Uncomment if you are building this box with Packer.
-  # config.vm.box_url = "file://CentOS74.box"
+  config.vm.box_url = "file://CentOS74.box"
   # Optional if you wish to use root as the default user
   # config.ssh.username = "root"
   # root user SSH password, you can uncomment this if you perfer password authentication
@@ -77,20 +77,24 @@ Vagrant.configure("2") do |config|
     hv.differencing_disk = true
 	end
 
-  # SMB Directory Sharing
-  unless File.exist?(".vagrant/machines/default/hyperv/action_provision")
-    config.vm.provision "shell", inline: <<-SHELL
-      yum install -y cifs-utils </dev/null
-    SHELL
-    config.vm.post_up_message = "VM is initialized but not ready.  Please run `vagrant reload` to finalize."
-  else
-    config.vm.synced_folder '.', '/vagrant', {
-      type: 'smb', mount_options: ['vers=3.0'],
-      smb_username: ENV['VAGRANT_SMB_USERNAME'],
-      smb_password: ENV['VAGRANT_SMB_PASSWORD']
-    }
-    config.vm.post_up_message = "Your VM is ready for use."
-  end
+  # Disable SMB Share
+  # config.vm.synced_folder ".", "/vagrant", disabled: true
+
+	# SMB Directory Sharing
+	#unless File.exist?(".vagrant/machines/default/hyperv/action_provision")
+	#	config.vm.provision "shell", inline: <<-SHELL
+	#	yum update -y
+	#	yum install -y cifs-utils </dev/null
+	#	SHELL
+	#	config.vm.post_up_message = "VM is initialized but not ready.  Please run `vagrant reload` to finalize."
+	#else
+	#	config.vm.synced_folder '.', '/vagrant', {
+	#		type: 'smb', mount_options: ['vers=3.0'],
+	#		smb_username: ENV['VAGRANT_SMB_USERNAME'],
+	#		smb_password: ENV['VAGRANT_SMB_PASSWORD']
+	#	}
+	#	config.vm.post_up_message = "Your VM is ready for use."
+	#end
 
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -100,17 +104,17 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   # Optional, allows you to provision with Ansible locally
 
-    config.vm.provision "shell", inline: <<-SHELL
-  	yum update -y
-    # setup VirtualBox
-    # sudo /usr/lib/virtualbox/vboxdrv.sh setup
-    # Check Chef DK version
-  	chef --version
-  	# Check Virtualbox version
-  	# echo 'VirtualBox Version: '
-  	# VBoxManage --version
-  	# Check Vagrant version
-  	# vagrant --version
-    # provisioning commands go here
-    SHELL
+  #config.vm.provision "shell", inline: <<-SHELL
+	#yum update -y
+  # setup VirtualBox
+  # sudo /usr/lib/virtualbox/vboxdrv.sh setup
+  # Check Chef DK version
+	#chef --version
+	# Check Virtualbox version
+	# echo 'VirtualBox Version: '
+	# VBoxManage --version
+	# Check Vagrant version
+	# vagrant --version
+  # provisioning commands go here
+  #SHELL
 end
