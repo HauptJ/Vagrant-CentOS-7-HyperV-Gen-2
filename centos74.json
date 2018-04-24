@@ -21,6 +21,7 @@
       "enable_mac_spoofing": "true",
       "enable_dynamic_memory": "false",
       "enable_virtualization_extensions": "true",
+      "differencing_disk": "true",
       "cpu": 2,
       "generation": 2,
       "switch_name": "{{user `switch_name`}}",

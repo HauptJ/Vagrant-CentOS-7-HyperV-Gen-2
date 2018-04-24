@@ -20,8 +20,8 @@ yum install -y \
 echo '[local]' >> /etc/ansible/hosts
 echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
 
-# Create WordPress group for local Ansible provisioning
-echo '[wordpress]' >> /etc/ansible/hosts
+# Create Vagrant group for provisioning with Ansible
+echo '[vagrant]' >> /etc/ansible/hosts
 echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
 
 # Clone and run ansible playbook
