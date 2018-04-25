@@ -15,7 +15,7 @@ Usage:
 ------
 
 - Export **VAGRANT_SMB_USERNAME**: `$env:VAGRANT_SMB_USERNAME="username"`
-- Export **VAGRANT_SMB_PASSWORD'**: `$env:VAGRANT_SMB_PASSWORD="password"`
+- Export **VAGRANT_SMB_PASSWORD**: `$env:VAGRANT_SMB_PASSWORD="password"`
 
 
 **Vagrantfile**
