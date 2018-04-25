@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   # Rename if you are builing this box with Packer.
   #config.vm.box = "hauptj/CentOS74"
   # LOCAL test box
-  config.vm.box = "CentOS74"
+  config.vm.box = "hauptj/CentOS74"
   #config.vm.box_version = "22.3.18"
   # Uncomment if you are building this box with Packer.
   #config.vm.box_url = "file://CentOS74.box"
