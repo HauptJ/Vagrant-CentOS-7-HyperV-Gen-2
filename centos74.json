@@ -39,7 +39,10 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "inline": [ "sleep 10" ]
+    },
+    {
+      "type": "shell",
       "script": "scripts/ansible.sh"
     }
   ],
