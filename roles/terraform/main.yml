@@ -1,0 +1,9 @@
+---
+  # Install Terraform
+
+- name: download and install terraform
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/{{ terraform_ver }}/terraform_{{ terraform_ver }}_linux_amd64.zip
+    dest: /usr/local/bin
+    mode: 0775
+    remote_src: yes

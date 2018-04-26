@@ -16,6 +16,7 @@
     - boxsetup
     - editors
     - ansible
+    - terraform
     - chef
     #- virtualbox
     #- vagrant

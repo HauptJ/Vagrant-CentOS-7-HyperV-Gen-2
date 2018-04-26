@@ -28,8 +28,8 @@ echo 'localhost              ansible_connection=local              ansible_user=
 echo '[wordpress]' >> /etc/ansible/hosts
 echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
 
-# Create Site group for provisioning with Ansible
-echo '[site]' >> /etc/ansible/hosts
+# Create cv group for provisioning with Ansible
+echo '[cv]' >> /etc/ansible/hosts
 echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
 
 # Clone and run ansible playbook
