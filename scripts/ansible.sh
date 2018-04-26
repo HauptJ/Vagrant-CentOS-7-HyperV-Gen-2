@@ -24,6 +24,14 @@ echo 'localhost              ansible_connection=local              ansible_user=
 echo '[vagrant]' >> /etc/ansible/hosts
 echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
 
+# Create WordPress group for provisioning with Ansible
+echo '[wordpress]' >> /etc/ansible/hosts
+echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
+
+# Create Site group for provisioning with Ansible
+echo '[site]' >> /etc/ansible/hosts
+echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
+
 # Clone and run ansible playbook
 pushd /tmp/
 git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
