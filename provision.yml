@@ -18,5 +18,5 @@
     - ansible
     - terraform
     - chef
-    #- virtualbox
-    #- vagrant
+    - virtualbox
+    - vagrant
