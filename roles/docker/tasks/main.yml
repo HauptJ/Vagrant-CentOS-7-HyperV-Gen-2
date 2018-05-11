@@ -12,8 +12,8 @@
   yum_repository:
     name: docker-ce-stable
     description: Docker CE Stable - $basearch
-    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
-    gpgkey: https://download.docker.com/linux/fedora/gpg
+    baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+    gpgkey: https://download.docker.com/linux/centos/gpg
     gpgcheck: yes
     enabled: yes
     state: present
