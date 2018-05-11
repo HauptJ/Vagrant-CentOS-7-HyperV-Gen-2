@@ -14,23 +14,11 @@ yum -y --enablerepo=extras install epel-release
 # Install requirements for Ansible provisioning
 yum install -y \
   ansible \
-  git
+  git \
+  wget
 
-# Create local group for local Ansible provisioning
-echo '[local]' >> /etc/ansible/hosts
-echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
-
-# Create Vagrant group for provisioning with Ansible
-echo '[vagrant]' >> /etc/ansible/hosts
-echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
-
-# Create WordPress group for provisioning with Ansible
-echo '[wordpress]' >> /etc/ansible/hosts
-echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
-
-# Create cv group for provisioning with Ansible
-echo '[cv]' >> /etc/ansible/hosts
-echo 'localhost              ansible_connection=local              ansible_user=root' >> /etc/ansible/hosts
+# Download Ansible inventory file
+wget https://raw.githubusercontent.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2/master/hosts -O  /etc/ansible/hosts
 
 # Clone and run ansible playbook
 pushd /tmp/

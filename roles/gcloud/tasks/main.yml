@@ -1,0 +1,32 @@
+# @Author: Haupt Joshua
+# @Date:   10-May-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   Haupt Joshua
+# @Last modified time: 10-May-2018
+
+---
+  # Install Google Cloud SDK
+
+- name: Add Google Cloud SDK
+  yum_repository:
+    name: google-cloud-sdk
+    description: Google Cloud SDK
+    baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+    gpgkey:
+      - https://packages.cloud.google.com/yum/doc/yum-key.gpg
+      - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+    gpgcheck: yes
+    repo_gpgcheck: yes
+    enabled: yes
+    state: present
+
+- name: install google cloud utilities
+  yum:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - google-cloud-sdk
+    - kubelet
+    - kubeadm
+    - kubectl
