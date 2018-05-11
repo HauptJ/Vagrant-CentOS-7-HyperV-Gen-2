@@ -6,9 +6,9 @@
 # @Last modified time: 10-May-2018
 
 ---
-  # Install Google Cloud SDK
+# Install Google Cloud SDK
 
-- name: Add Google Cloud SDK
+- name: add Google Cloud SDK repo
   yum_repository:
     name: google-cloud-sdk
     description: Google Cloud SDK
