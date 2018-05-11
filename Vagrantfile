@@ -16,8 +16,8 @@ Vagrant.configure("2") do |config|
   # Rename if you are builing this box with Packer.
   #config.vm.box = "hauptj/CentOS74"
   # LOCAL test box
-  config.vm.box = "hauptj/CentOS74"
-  #config.vm.box_version = "22.3.18"
+  config.vm.box = "hauptj/CentOS75"
+  config.vm.box_version = "11.5.2018"
   # Uncomment if you are building this box with Packer.
   #config.vm.box_url = "file://CentOS74.box"
   # Optional if you wish to use root as the default user
@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
 	end
 
   # Disable SMB Share
-  # config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder ".", "/vagrant", disabled: true
 
 	# Configure SMB Directory Sharing
 	#	config.vm.synced_folder '.', '/vagrant', {
