@@ -19,6 +19,7 @@
     - terraform
     - gcloud
     - docker
+    - golang
     - chef
     #- virtualbox
     #- vagrant

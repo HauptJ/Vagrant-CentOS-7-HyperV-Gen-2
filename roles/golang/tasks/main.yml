@@ -1,0 +1,17 @@
+# @Author: Haupt Joshua
+# @Date:   10-May-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   Haupt Joshua
+# @Last modified time: 10-May-2018
+
+---
+  # Install Golang
+
+- name: install the latest and greatest of golang
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - golang
+    - golang-googlecode-net-devel
