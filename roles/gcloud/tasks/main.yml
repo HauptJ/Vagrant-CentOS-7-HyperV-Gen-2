@@ -23,10 +23,5 @@
 
 - name: install google cloud utilities
   yum:
-    name: '{{ item }}'
+    name: google-cloud-sdk
     state: latest
-  with_items:
-    - google-cloud-sdk
-    - kubelet
-    - kubeadm
-    - kubectl
