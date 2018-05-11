@@ -1,4 +1,6 @@
-# Vagrant Hyper-V Gen 2 Centos 7.4 - 1708 AMD 64
+# Vagrant Hyper-V Gen 2 Centos 7.5 - 1804 AMD 64
+
+[![Build Status](https://travis-ci.org/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.svg?branch=master)](https://travis-ci.org/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2)
 
 This is a Hyper-V generation 2 box with GPT partitioning and nested virtualization. It includes Ansible Roles to install Git, Ansible, Terraform, Chef, Vagrant, VirtualBox, Docker, Golang, and the Google Cloud SDK.
 SELinux and firewall services are disabled by default.
@@ -8,7 +10,7 @@ The password for the `root` user is `vagrant` and the infamous `insecure_private
 
 You can run Ansible locally on Windows hosts using the `shell` provisioner with `config.ssh.username = "root"` specified in the Vagrantfile.
 
-- [Vagrant Cloud Box without VirtualBox and Vagrant](https://app.vagrantup.com/hauptj/boxes/CentOS74)
+- [Vagrant Cloud Box without VirtualBox and Vagrant](https://app.vagrantup.com/hauptj/boxes/CentOS75)
 - [Vagrant Cloud Box with VirtualBox and Vagrant](https://app.vagrantup.com/hauptj/boxes/CentOS74VB)
 
 Usage:
