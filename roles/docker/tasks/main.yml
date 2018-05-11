@@ -24,7 +24,8 @@
     state: latest
 
 - name: Add {{ user }} user to docker group
-  user: '{{ user }}'
+  user:
+    name: '{{ user }}'
     groups: docker
     append: yes
 
