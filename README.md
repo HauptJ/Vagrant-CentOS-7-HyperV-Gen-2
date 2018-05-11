@@ -1,6 +1,6 @@
 # Vagrant Hyper-V Gen 2 Centos 7.4 - 1708 AMD 64
 
-This is a Hyper-V generation 2 box with GPT partitioning and nested virtualization. It includes Ansible Roles to install Git, Ansible, Terraform, Chef, Vagrant, VirtualBox, Docker, and the Google Cloud SDK.
+This is a Hyper-V generation 2 box with GPT partitioning and nested virtualization. It includes Ansible Roles to install Git, Ansible, Terraform, Chef, Vagrant, VirtualBox, Docker, Golang, and the Google Cloud SDK.
 SELinux and firewall services are disabled by default.
 
 A group called `local` is in the Ansible inventory file `/etc/ansible/hosts` to be used for local provisioning. As of `v22.3.2018`, usage of the `root` user for provisioning is optional.
