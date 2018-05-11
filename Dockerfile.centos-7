@@ -16,7 +16,10 @@ RUN yum -y install epel-release
 RUN yum -y install \
   ansible \
   sudo \
-  gtar
+  gtar \
+  unzip \
+  wget \
+  curl
 
 # Install Dependencies from Ansible Galaxy
 
