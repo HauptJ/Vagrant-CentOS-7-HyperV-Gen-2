@@ -19,12 +19,12 @@
     state: present
 
 - name: install the latest stable version of docker-ce
-  dnf:
+  yum:
     name: docker-ce
     state: latest
 
 - name: Add {{ user }} user to docker group
-  user: "{{ user }}"
+  user: '{{ user }}'
     groups: docker
     append: yes
 
