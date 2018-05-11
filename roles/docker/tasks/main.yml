@@ -1,0 +1,35 @@
+# @Author: Haupt Joshua
+# @Date:   10-May-2018
+# @Email:  josh@hauptj.com
+# @Filename: main.yml
+# @Last modified by:   Haupt Joshua
+# @Last modified time: 10-May-2018
+
+---
+  # Install Docker
+
+- name: Add Docker Stable repo
+  yum_repository:
+    name: docker-ce-stable
+    description: Docker CE Stable - $basearch
+    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+    gpgkey: https://download.docker.com/linux/fedora/gpg
+    gpgcheck: yes
+    enabled: yes
+    state: present
+
+- name: install the latest stable version of docker-ce
+  dnf:
+    name: docker-ce
+    state: latest
+
+- name: Add {{ user }} user to docker group
+  user: "{{ user }}"
+    groups: docker
+    append: yes
+
+- name: Download and install Docker Compose {{ docker_compose_ver }}
+  get_url:
+    url: 'https://github.com/docker/compose/releases/download/{{ docker_compose_ver }}/docker-compose-Linux-x86_64'
+    dest: '/usr/local/bin/docker-compose'
+    mode: 0755

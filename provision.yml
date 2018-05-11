@@ -3,7 +3,7 @@
 # @Email:  josh@hauptj.com
 # @Filename: provision.yml
 # @Last modified by:   Haupt Joshua
-# @Last modified time: 08-Apr-2018
+# @Last modified time: 10-May-2018
 
 ---
 - name: Provisions VagrantBox with stuff
@@ -17,6 +17,8 @@
     - editors
     - ansible
     - terraform
+    - gcloud
+    - docker
     - chef
-    - virtualbox
-    - vagrant
+    #- virtualbox
+    #- vagrant
