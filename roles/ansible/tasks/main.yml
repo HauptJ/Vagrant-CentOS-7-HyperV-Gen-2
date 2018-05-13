@@ -28,8 +28,8 @@
 #     - pywinrm
 #     - ansible-container[docker,k8s]
 
-- name: install pywinrm
-  shell: sudo -H pip install pywinrm
-
-- name: install pywinrm
-  shell: sudo -H pip install ansible-container[docker,k8s]
+# - name: install pywinrm
+#   shell: sudo -H pip install pywinrm
+#
+# - name: install pywinrm
+#   shell: sudo -H pip install ansible-container[docker,k8s]
