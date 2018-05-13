@@ -15,7 +15,7 @@
   with_items:
     - git
     - python2
-    - python3
+    - python
     - python-pip
     - ansible
 
