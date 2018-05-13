@@ -19,11 +19,17 @@
     - python-pip
     - ansible
 
-- name: install pywinrm and ansible container
-  pip:
-    name: "{{ item }}"
-    extra_args: -H
-  become: yes
-  with_items:
-    - pywinrm
-    - ansible-container[docker,k8s]
+# - name: install pywinrm and ansible container
+#   pip:
+#     name: "{{ item }}"
+#     extra_args: -H
+#   become: yes
+#   with_items:
+#     - pywinrm
+#     - ansible-container[docker,k8s]
+
+- name: install pywinrm
+  shell: pip install pywinrm
+
+- name: install pywinrm
+  shell: pip install ansible-container[docker,k8s]
