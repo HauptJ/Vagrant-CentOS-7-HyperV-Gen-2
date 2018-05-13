@@ -29,7 +29,7 @@
 #     - ansible-container[docker,k8s]
 
 - name: install pywinrm
-  shell: pip install pywinrm
+  shell: pip3 install pywinrm
 
 - name: install pywinrm
-  shell: pip install ansible-container[docker,k8s]
+  shell: pip3 install ansible-container[docker,k8s]
