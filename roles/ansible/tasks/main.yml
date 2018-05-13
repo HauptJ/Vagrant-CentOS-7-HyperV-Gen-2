@@ -10,7 +10,7 @@
 
 - name: Install the latest version of Ansible, GIT, and python-pip
   yum:
-    name: "{{ itme }}"
+    name: "{{ item }}"
     state: latest
   with_items:
     - git
