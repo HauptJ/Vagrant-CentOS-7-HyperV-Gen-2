@@ -8,12 +8,21 @@
 ---
   # Install Ansible
 
-- name: Install the latest version of Ansible
+- name: Install the latest version of Ansible, GIT, and python-pip
   yum:
-    name: ansible
+    name: "{{ itme }}"
     state: latest
+  with_items:
+    - git
+    - python2
+    - python3
+    - python-pip
+    - ansible
 
-- name: Install the latest version of GIT
-  yum:
-    name: git
-    state: latest
+- name: install pywinrm and ansible container
+  pip:
+    name: ansible-container[docker,k8s]
+  become: yes
+  with_items:
+    - pywinrm
+    - ansible-container[docker,k8s]
