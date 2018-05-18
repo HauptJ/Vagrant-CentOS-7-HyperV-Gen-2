@@ -1,0 +1,120 @@
+2018/05/14 13:51:25 [INFO] Packer version: 1.2.3
+2018/05/14 13:51:25 Packer Target OS/Arch: windows amd64
+2018/05/14 13:51:25 Built with Go Version: go1.10.1
+2018/05/14 13:51:25 Using internal plugin for profitbricks
+2018/05/14 13:51:25 Using internal plugin for openstack
+2018/05/14 13:51:25 Using internal plugin for amazon-instance
+2018/05/14 13:51:25 Using internal plugin for ncloud
+2018/05/14 13:51:25 Using internal plugin for triton
+2018/05/14 13:51:25 Using internal plugin for virtualbox-ovf
+2018/05/14 13:51:25 Using internal plugin for alicloud-ecs
+2018/05/14 13:51:25 Using internal plugin for amazon-ebs
+2018/05/14 13:51:25 Using internal plugin for digitalocean
+2018/05/14 13:51:25 Using internal plugin for parallels-pvm
+2018/05/14 13:51:25 Using internal plugin for amazon-ebsvolume
+2018/05/14 13:51:25 Using internal plugin for oneandone
+2018/05/14 13:51:25 Using internal plugin for vmware-iso
+2018/05/14 13:51:25 Using internal plugin for hyperv-vmcx
+2018/05/14 13:51:25 Using internal plugin for lxc
+2018/05/14 13:51:25 Using internal plugin for oracle-classic
+2018/05/14 13:51:25 Using internal plugin for vmware-vmx
+2018/05/14 13:51:25 Using internal plugin for cloudstack
+2018/05/14 13:51:25 Using internal plugin for docker
+2018/05/14 13:51:25 Using internal plugin for googlecompute
+2018/05/14 13:51:25 Using internal plugin for hyperv-iso
+2018/05/14 13:51:25 Using internal plugin for lxd
+2018/05/14 13:51:25 Using internal plugin for qemu
+2018/05/14 13:51:25 Using internal plugin for scaleway
+2018/05/14 13:51:25 Using internal plugin for virtualbox-iso
+2018/05/14 13:51:25 Using internal plugin for amazon-chroot
+2018/05/14 13:51:25 Using internal plugin for azure-arm
+2018/05/14 13:51:25 Using internal plugin for file
+2018/05/14 13:51:25 Using internal plugin for null
+2018/05/14 13:51:25 Using internal plugin for oracle-oci
+2018/05/14 13:51:25 Using internal plugin for parallels-iso
+2018/05/14 13:51:25 Using internal plugin for amazon-ebssurrogate
+2018/05/14 13:51:25 Using internal plugin for puppet-masterless
+2018/05/14 13:51:25 Using internal plugin for windows-shell
+2018/05/14 13:51:25 Using internal plugin for file
+2018/05/14 13:51:25 Using internal plugin for powershell
+2018/05/14 13:51:25 Using internal plugin for converge
+2018/05/14 13:51:25 Using internal plugin for ansible
+2018/05/14 13:51:25 Using internal plugin for ansible-local
+2018/05/14 13:51:25 Using internal plugin for salt-masterless
+2018/05/14 13:51:25 Using internal plugin for windows-restart
+2018/05/14 13:51:25 Using internal plugin for puppet-server
+2018/05/14 13:51:25 Using internal plugin for shell
+2018/05/14 13:51:25 Using internal plugin for shell-local
+2018/05/14 13:51:25 Using internal plugin for chef-client
+2018/05/14 13:51:25 Using internal plugin for chef-solo
+2018/05/14 13:51:25 Using internal plugin for docker-push
+2018/05/14 13:51:25 Using internal plugin for docker-save
+2018/05/14 13:51:25 Using internal plugin for docker-tag
+2018/05/14 13:51:25 Using internal plugin for vagrant-cloud
+2018/05/14 13:51:25 Using internal plugin for alicloud-import
+2018/05/14 13:51:25 Using internal plugin for checksum
+2018/05/14 13:51:25 Using internal plugin for docker-import
+2018/05/14 13:51:25 Using internal plugin for googlecompute-export
+2018/05/14 13:51:25 Using internal plugin for manifest
+2018/05/14 13:51:25 Using internal plugin for shell-local
+2018/05/14 13:51:25 Using internal plugin for vsphere
+2018/05/14 13:51:25 Using internal plugin for artifice
+2018/05/14 13:51:25 Using internal plugin for atlas
+2018/05/14 13:51:25 Using internal plugin for amazon-import
+2018/05/14 13:51:25 Using internal plugin for vagrant
+2018/05/14 13:51:25 Using internal plugin for vsphere-template
+2018/05/14 13:51:25 Using internal plugin for compress
+2018/05/14 13:51:25 Attempting to open config file: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 [WARN] Config file doesn't exist: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[docker:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker profitbricks:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks virtualbox-ovf:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf lxc:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc file:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file amazon-instance:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance digitalocean:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean oneandone:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone scaleway:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway triton:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton parallels-pvm:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm virtualbox-iso:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso amazon-chroot:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot azure-arm:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm oracle-oci:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci alicloud-ecs:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs hyperv-vmcx:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx oracle-classic:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic hyperv-iso:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso lxd:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd amazon-ebssurrogate:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate openstack:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack ncloud:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud amazon-ebs:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs cloudstack:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack null:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null vmware-iso:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso vmware-vmx:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx googlecompute:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute parallels-iso:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso amazon-ebsvolume:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume qemu:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu] PostProcessors:map[docker-tag:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag checksum:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum googlecompute-export:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export manifest:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest vsphere:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere vsphere-template:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template compress:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress shell-local:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local atlas:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-atlas amazon-import:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import docker-push:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push docker-save:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save vagrant-cloud:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud alicloud-import:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import docker-import:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import vagrant:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant artifice:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice] Provisioners:map[ansible-local:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local windows-shell:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell file:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file chef-client:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client chef-solo:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo salt-masterless:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless shell-local:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local powershell:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell converge:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge windows-restart:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart puppet-server:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server shell:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell puppet-masterless:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless ansible:C:\ProgramData\chocolatey\lib\packer\tools\packer.exe-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible]}
+2018/05/14 13:51:25 Setting cache directory: C:\Users\Administrator\DEV\hauptj\Vagrant-CentOS-7-HyperV-Gen-2\packer_cache
+2018/05/14 13:51:25 Loading builder: hyperv-iso
+2018/05/14 13:51:25 Plugin could not be found. Checking same directory as executable.
+2018/05/14 13:51:25 Current exe path: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 Creating plugin client for path: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 Starting plugin: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe []string{"C:\\ProgramData\\chocolatey\\lib\\packer\\tools\\packer.exe", "plugin", "packer-builder-hyperv-iso"}
+2018/05/14 13:51:25 Waiting for RPC address for: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 [INFO] Packer version: 1.2.3
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Packer Target OS/Arch: windows amd64
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Built with Go Version: go1.10.1
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Attempting to open config file: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 [WARN] Config file doesn't exist: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Setting cache directory: C:\Users\Administrator\DEV\hauptj\Vagrant-CentOS-7-HyperV-Gen-2\packer_cache
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 args: []string{"packer-builder-hyperv-iso"}
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin minimum port: 10000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin maximum port: 25000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin address: tcp 127.0.0.1:10000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Waiting for connection...
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Serving a plugin connection...
+2018/05/14 13:51:25 Loading provisioner: shell
+2018/05/14 13:51:25 Plugin could not be found. Checking same directory as executable.
+2018/05/14 13:51:25 Current exe path: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 Creating plugin client for path: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 Starting plugin: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe []string{"C:\\ProgramData\\chocolatey\\lib\\packer\\tools\\packer.exe", "plugin", "packer-provisioner-shell"}
+2018/05/14 13:51:25 Waiting for RPC address for: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 [INFO] Packer version: 1.2.3
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Packer Target OS/Arch: windows amd64
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Built with Go Version: go1.10.1
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Attempting to open config file: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 [WARN] Config file doesn't exist: C:\Users\Administrator\AppData\Roaming\packer.config
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Setting cache directory: C:\Users\Administrator\DEV\hauptj\Vagrant-CentOS-7-HyperV-Gen-2\packer_cache
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 args: []string{"packer-provisioner-shell"}
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin minimum port: 10000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin maximum port: 25000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Plugin address: tcp 127.0.0.1:10000
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Waiting for connection...
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Serving a plugin connection...
+2018/05/14 13:51:25 Preparing build: hyperv-iso
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 DiskSize: 81920
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 DiskBlockSize: 32
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 RamSize: 6144
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 VMName: CentOS75
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 Using switch LANBridge
+2018/05/14 13:51:25 packer.exe: 2018/05/14 13:51:25 SwitchName: LANBridge
+2018/05/14 13:51:26 ui: Template validated successfully.
+2018/05/14 13:51:26 [INFO] (telemetry) Finalizing.
+2018/05/14 13:51:26 waiting for all plugin processes to complete...
+2018/05/14 13:51:26 C:\ProgramData\chocolatey\lib\packer\tools\packer.exe: plugin process exited
+2018/05/14 13:51:26 C:\ProgramData\chocolatey\lib\packer\tools\packer.exe: plugin process exited
