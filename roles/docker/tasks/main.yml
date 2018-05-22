@@ -27,7 +27,7 @@
   service:
     name: docker
     state: started
-    enabled: false
+    enabled: true
 
 - name: Add {{ user }} user to docker group
   user:
