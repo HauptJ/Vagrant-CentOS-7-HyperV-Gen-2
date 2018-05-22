@@ -23,6 +23,12 @@
     name: docker-ce
     state: latest
 
+- name: Start Docker
+  service:
+    name: docker
+    state: started
+    enabled: false
+
 - name: Add {{ user }} user to docker group
   user:
     name: '{{ user }}'
