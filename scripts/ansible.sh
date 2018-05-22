@@ -1,13 +1,5 @@
 #!/bin/bash -eux
 
-# @Author: Haupt Joshua <HauptJ>
-# @Date:   31-Mar-2018
-# @Email:  josh@hauptj.com
-# @Filename: ansible.sh
-# @Last modified by:   HauptJ
-# @Last modified time: 01-Apr-2018
-
-
 # Enable EPEL REPO
 #yum -y --enablerepo=extras install epel-release
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm

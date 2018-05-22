@@ -17,7 +17,6 @@ Vagrant.configure("2") do |config|
   #config.vm.box = "hauptj/CentOS74"
   # LOCAL test box
   config.vm.box = "hauptj/CentOS75"
-  config.vm.box_version = "11.5.2018"
   # Uncomment if you are building this box with Packer.
   #config.vm.box_url = "file://CentOS74.box"
   # Optional if you wish to use root as the default user
@@ -70,7 +69,7 @@ Vagrant.configure("2") do |config|
   #
 
 	config.vm.provider "hyperv" do |hv|
-		hv.vmname = "CentOS74"
+		hv.vmname = "CentOS75"
 		# With nested virtualization, at least 2 CPUs are needed.
 		hv.cpus = "2"
 		# With nested virtualization, at least 4GB of memory is needed.
