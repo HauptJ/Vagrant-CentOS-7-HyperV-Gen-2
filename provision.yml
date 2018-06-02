@@ -18,7 +18,7 @@
     - ansible
     - terraform
     - gcloud
-    - docker
+    - swarm
     - golang
     - chef
     #- virtualbox

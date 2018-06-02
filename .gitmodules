@@ -1,0 +1,3 @@
+[submodule "roles/swarm"]
+	path = roles/swarm
+	url = https://github.com/HauptJ/ansible-role-docker.git
