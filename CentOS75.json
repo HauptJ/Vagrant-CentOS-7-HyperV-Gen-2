@@ -38,6 +38,12 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "scripts\/hosts",
+      "destination": "/tmp/hosts",
+      "pause_before": "10s"
+    },
+    {
       "type": "shell",
       "script": "scripts\/ansible.sh",
       "pause_before": "10s"
