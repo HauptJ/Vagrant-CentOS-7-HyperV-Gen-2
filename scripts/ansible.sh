@@ -20,8 +20,8 @@ yum -y install \
   git \
   wget
 
-# Download Ansible inventory file
-wget https://raw.githubusercontent.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2/master/hosts -O  /etc/ansible/hosts
+# Copy Ansible inventory file
+cp /tmp/hosts /etc/ansible/hosts
 
 # Clone and run ansible playbook
 pushd /tmp/

@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hauptj/CentOS75"
   #config.vm.box_version = "22.5.2018"
   # Uncomment if you are building this box with Packer.
-  #config.vm.box_url = "file://CentOS74.box"
+  #config.vm.box_url = "file://CentOS75.box"
   # Optional if you wish to use root as the default user
   # config.ssh.username = "root"
   # root user SSH password, you can uncomment this if you perfer password authentication
