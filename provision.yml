@@ -21,6 +21,7 @@
     - gcloud
     - swarm
     - golang
-    - chef
+    - mongodb
+    #- chef
     #- virtualbox
     #- vagrant

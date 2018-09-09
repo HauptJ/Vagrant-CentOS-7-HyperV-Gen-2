@@ -1,0 +1,15 @@
+---
+# Install latest stable release of mongodb-org-4.0
+
+- name: Add MongoDB repo
+  yum_repository:
+    name: mongodb-org-4.0
+    description: MongoDB Repository
+    baseurl: https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/
+    gpgcheck: yes
+    enabled: yes
+    gpgkey: https://www.mongodb.org/static/pgp/server-4.0.asc
+
+- name: Install MongoDB client and Server
+  yum:
+    name: mongodb-org
