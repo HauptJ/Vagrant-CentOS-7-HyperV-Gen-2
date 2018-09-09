@@ -20,3 +20,10 @@ localhost
 [wordpress:vars]
 ansible_connection=local
 ansible_user=root
+
+[docker]
+localhost
+
+[docker:vars]
+ansible_connection=local
+ansible_user=root
