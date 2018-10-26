@@ -9,7 +9,7 @@ user: vagrant
 
 chef_ver: 2.5.3-1
 vagrant_ver: 2.0.3
-terraform_ver: 0.11.7
+terraform_ver: 0.11.8
 vb_ver: 5.2
 
 # Git Settings
@@ -18,7 +18,7 @@ git_user_email: joshua@hauptj.com
 
 # Docker Settings
 docker_user: vagrant
-docker_compose_ver: 1.18.0
+docker_compose_ver: 1.22.0
 docker_swarm_state: disabled
 docker_swarm_master_ip: 127.0.0.1
 docker_swarm_master_port: 2377
