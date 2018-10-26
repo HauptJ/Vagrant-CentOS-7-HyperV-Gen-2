@@ -31,7 +31,7 @@
     - gcc
     - kernel-devel
 
-- name: Install Virtualbox {{ vb_ver }}
+- name: Install Virtualbox 5.2
   yum:
     name: VirtualBox-5.2
     state: latest

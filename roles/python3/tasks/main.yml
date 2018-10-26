@@ -1,0 +1,16 @@
+---
+  # Install Python3
+
+- name: install the Software Collections repository
+  yum:
+    name: centos-release-scl
+    state: latest
+
+- name: install the latest and greatest of python3.6
+  yum:
+    name: rh-python36
+    state: latest
+
+- name: install the development tools group pack
+  yum:
+    name: "@Development Tools"
