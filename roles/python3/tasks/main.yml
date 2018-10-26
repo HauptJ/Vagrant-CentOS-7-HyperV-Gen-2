@@ -3,11 +3,13 @@
 
 - name: install the latest and greatest of python3
   yum:
-    name: "{{ item }}"
+    name: centos-release-scl
     state: latest
-  with_items:
-    - centos-release-scl
-    - rh-python37
+
+- name: install the latest and greatest of python3
+  yum:
+    name: rh-python37
+    state: latest
 
 - name: install the development tools group pack
   yum:
