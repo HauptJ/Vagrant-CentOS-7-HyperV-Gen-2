@@ -8,7 +8,7 @@
 
 - name: install the latest and greatest of python3
   yum:
-    name: rh-python37
+    name: rh-python36
     state: latest
 
 - name: install the development tools group pack
