@@ -27,6 +27,6 @@ cp /tmp/hosts /etc/ansible/hosts
 pushd /tmp/
 git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
 pushd Vagrant-CentOS-7-HyperV-Gen-2/
-ansible-playbook provision.yml --skip-tags chef, virtualbox, vagrant
+ansible-playbook provision.yml --skip-tags "ipv6, kimsurfi, restart, chef, virtualbox, vagrant"
 popd
 popd
