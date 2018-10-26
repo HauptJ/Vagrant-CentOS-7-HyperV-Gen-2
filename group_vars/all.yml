@@ -8,9 +8,8 @@
 user: vagrant
 
 chef_ver: 2.5.3-1
-vagrant_ver: 2.0.3
+vagrant_ver: 2.2.0
 terraform_ver: 0.11.8
-vb_ver: 5.2
 
 # Git Settings
 git_user_name: Joshua Haupt
