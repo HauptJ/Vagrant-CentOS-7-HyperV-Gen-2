@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.svg?branch=master)](https://travis-ci.org/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2)
 
-This is a Hyper-V generation 2 box with GPT partitioning and nested virtualization. It includes Ansible Roles to install Git, Ansible, Terraform, Chef, Vagrant, VirtualBox, Docker, Golang, Python and the Google Cloud SDK.
+This is a Hyper-V generation 2 box with GPT partitioning and nested virtualization. It includes Ansible Roles to install Git, Ansible, Terraform, Chef, Vagrant, VirtualBox, Docker, Golang, Python 2 and 3, ruby, Node.js and the Google Cloud SDK. You can add a tag with the name of the package you do not wish to install in `scripts/ansible.sh`. Look for `--skip-tags`.
+
 SELinux and firewall services are disabled by default.
 
 A group called `local` is in the Ansible inventory file `/etc/ansible/hosts` to be used for local provisioning.
