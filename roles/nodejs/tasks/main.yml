@@ -1,0 +1,20 @@
+---
+  # Install NodeJS
+
+- name: Add yarn repo
+  yum_repository:
+    name: yarn
+    description: Yarn Repository
+    baseurl: https://dl.yarnpkg.com/rpm/
+    gpgcheck: yes
+    enabled: yes
+    gpgkey: https://dl.yarnpkg.com/rpm/pubkey.gpg
+
+- name: install the latest and greatest of nodejs
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - nodejs
+    - npm
+    - yarn

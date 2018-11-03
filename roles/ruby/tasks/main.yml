@@ -1,0 +1,7 @@
+---
+- name: install the latest and greatest of ruby
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - ruby

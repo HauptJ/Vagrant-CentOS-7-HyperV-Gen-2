@@ -4,6 +4,7 @@
 /CentOS75
 /packer_cache
 /.vagrant
+packerhv*
 *.iso
 *.box
 *.zip
