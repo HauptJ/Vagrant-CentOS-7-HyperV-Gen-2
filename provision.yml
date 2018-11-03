@@ -23,6 +23,7 @@
     - { role: golang, tags: golang }
     - { role: python3, tags: python3 }
     - { role: nodejs, tags: nodejs }
+    - { role: ruby, tags: ruby }
     - { role: mongodb, tags: mongodb }
     - { role: chef, tags: chef }
     - { role: virtualbox, tags: virtualbox }
