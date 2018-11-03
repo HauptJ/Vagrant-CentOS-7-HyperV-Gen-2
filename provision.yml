@@ -3,7 +3,7 @@
 # @Email:  josh@hauptj.com
 # @Filename: provision.yml
 # @Last modified by:   Haupt Joshua
-# @Last modified time: 26-Oct-2018
+# @Last modified time: 03-Nov-2018
 
 ---
 - name: Provisions VagrantBox with stuff
@@ -22,6 +22,7 @@
     - { role: swarm, tags: swarm }
     - { role: golang, tags: golang }
     - { role: python3, tags: python3 }
+    - { role: nodejs, tags: nodejs }
     - { role: mongodb, tags: mongodb }
     - { role: chef, tags: chef }
     - { role: virtualbox, tags: virtualbox }
