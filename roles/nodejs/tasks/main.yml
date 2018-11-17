@@ -12,9 +12,8 @@
 
 - name: install the latest and greatest of nodejs
   yum:
-    name: "{{ item }}"
-    state: latest
-  with_items:
+    name:
     - nodejs
     - npm
     - yarn
+    state: latest

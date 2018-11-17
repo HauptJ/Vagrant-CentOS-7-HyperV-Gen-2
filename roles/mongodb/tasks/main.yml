@@ -13,3 +13,4 @@
 - name: Install MongoDB client and Server
   yum:
     name: mongodb-org
+    state: latest

@@ -25,11 +25,10 @@
 
 - name: Install gcc and kernel-devel for VirtualBox
   yum:
-    name: "{{ item }}"
+    name:
+      - gcc
+      - kernel-devel
     state: latest
-  with_items:
-    - gcc
-    - kernel-devel
 
 - name: Install Virtualbox 5.2
   yum:

@@ -10,9 +10,8 @@
 
 - name: Install the latest version of vim, emacs, and nano
   yum:
-    name: "{{ item }}"
+    name:
+      - vim
+      - emacs
+      - nano
     state: latest
-  with_items:
-    - vim
-    - emacs
-    - nano

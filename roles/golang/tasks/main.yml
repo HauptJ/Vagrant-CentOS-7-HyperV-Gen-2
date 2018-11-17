@@ -10,8 +10,7 @@
 
 - name: install the latest and greatest of golang
   yum:
-    name: "{{ item }}"
+    name:
+      - golang
+      - golang-googlecode-net-devel
     state: latest
-  with_items:
-    - golang
-    - golang-googlecode-net-devel
