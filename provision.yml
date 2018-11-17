@@ -3,7 +3,7 @@
 # @Email:  josh@hauptj.com
 # @Filename: provision.yml
 # @Last modified by:   Haupt Joshua
-# @Last modified time: 07-Sept-2018
+# @Last modified time: 03-Nov-2018
 
 ---
 - name: Provisions VagrantBox with stuff
@@ -13,14 +13,18 @@
 
 
   roles:
-    - boxsetup
-    - git
-    - editors
-    - ansible
-    - terraform
-    - gcloud
-    - swarm
-    - golang
-    - chef
-    #- virtualbox
-    #- vagrant
+    - { role: boxsetup }
+    - { role: git, tags: git }
+    - { role: editors, tags: editors }
+    - { role: ansible, tags: ansible }
+    - { role: terraform, tags: terraform }
+    - { role: gcloud, tags: gcloud }
+    - { role: swarm, tags: swarm }
+    - { role: golang, tags: golang }
+    - { role: python3, tags: python3 }
+    - { role: nodejs, tags: nodejs }
+    - { role: ruby, tags: ruby }
+    - { role: mongodb, tags: mongodb }
+    - { role: chef, tags: chef }
+    - { role: virtualbox, tags: virtualbox }
+    - { role: vagrant, tags: vagrant }
