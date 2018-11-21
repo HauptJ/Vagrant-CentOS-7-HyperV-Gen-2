@@ -1,0 +1,60 @@
+{
+  "builders": [
+    {
+      "type": "hyperv-iso",
+      "vm_name": "CentOS75Lite",
+      "temp_path": ".",
+      "iso_urls": [
+        "{{ user `iso_disk` }}",
+        "{{ user `iso_url`}}"
+      ],
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "disk_size": 81920,
+      "communicator": "ssh",
+      "ssh_username": "root",
+      "ssh_password": "vagrant",
+      "ssh_timeout" : "4h",
+      "shutdown_timeout": "30m",
+      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "ram_size": 6144,
+      "enable_mac_spoofing": "true",
+      "enable_dynamic_memory": "false",
+      "enable_virtualization_extensions": "true",
+      "differencing_disk": "true",
+      "cpu": 4,
+      "generation": 2,
+      "switch_name": "{{user `switch_name`}}",
+      "vlan_id": "{{user `vlan_id`}}",
+      "http_directory": "http",
+      "boot_wait": "5s",
+      "boot_command": [
+        "c  setparams 'kickstart' <enter> linuxefi /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20x\\86_64 inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter> initrdefi /images/pxeboot/initrd.img<enter> boot<enter>"
+      ],
+      "guest_additions_mode": "disable",
+      "enable_secure_boot": false,
+      "output_directory": "CentOS75Lite"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "scripts\/hosts",
+      "destination": "/tmp/hosts",
+      "pause_before": "10s"
+    },
+    {
+      "type": "shell",
+      "script": "scripts\/ansible75Lite.sh",
+      "pause_before": "10s"
+    }
+  ],
+  "variables": {
+    "iso_disk": "CentOS-7-x86_64-DVD-1804.iso",
+    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.5.1804/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso",
+    "iso_checksum_type": "sha256",
+    "iso_checksum": "506e4e06abf778c3435b4e5745df13e79ebfc86565d7ea1e128067ef6b5a6345",
+    "switch_name": "LANBridge",
+    "vlan_id": ""
+  }
+}

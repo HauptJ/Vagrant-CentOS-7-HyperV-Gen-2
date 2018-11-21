@@ -10,5 +10,5 @@
 
 - name: Install Chef Dev Kit
   yum:
-    name: https://packages.chef.io/files/stable/chefdk/2.5.3/el/7/chefdk-{{ chef_ver }}.el7.x86_64.rpm
+    name: https://packages.chef.io/files/stable/chefdk/{{ chef_dk_ver }}/el/7/chefdk-{{ chef_dk_ver }}-1.el7.x86_64.rpm
     state: present

@@ -7,7 +7,7 @@
 
 user: vagrant
 
-chef_ver: 2.5.3-1
+chef_dk_ver: 3.5.13
 vagrant_ver: 2.2.0
 terraform_ver: 0.11.8
 
