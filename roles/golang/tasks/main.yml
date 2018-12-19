@@ -3,14 +3,23 @@
 # @Email:  josh@hauptj.com
 # @Filename: main.yml
 # @Last modified by:   Haupt Joshua
-# @Last modified time: 10-May-2018
+# @Last modified time: 18-Dec-2018
 
 ---
   # Install Golang
+
+- name: Install the Go Repo
+  yum_repository:
+    name: go-repo
+    description: go-repo - CentOS
+    baseurl: https://mirror.go-repo.io/centos/$releasever/$basearch/
+    gpgkey: https://mirror.go-repo.io/centos/RPM-GPG-KEY-GO-REPO
+    gpgcheck: yes
+    enabled: yes
+    state: present
 
 - name: install the latest and greatest of golang
   yum:
     name:
       - golang
-      - golang-googlecode-net-devel
     state: latest

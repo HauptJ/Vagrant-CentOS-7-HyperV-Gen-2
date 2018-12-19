@@ -32,8 +32,7 @@
         "c  setparams 'kickstart' <enter> linuxefi /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20x\\86_64 inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter> initrdefi /images/pxeboot/initrd.img<enter> boot<enter>"
       ],
       "guest_additions_mode": "disable",
-      "enable_secure_boot": false,
-      "output_directory": "CentOS75"
+      "enable_secure_boot": false
     }
   ],
   "provisioners": [
@@ -49,12 +48,28 @@
       "pause_before": "10s"
     }
   ],
+  "post-processors": [
+  [
+    {
+      "type": "vagrant",
+      "output": "builds/{{.Provider}}-CentOS76.box",
+      "compression_level": 9
+    },
+    {
+      "type": "vagrant-cloud",
+      "box_tag": "hauptj/CentOS76",
+      "version": "{{user `version`}}"
+    }
+  ]
+],
   "variables": {
-    "iso_disk": "CentOS-7-x86_64-DVD-1804.iso",
-    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.5.1804/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso",
+    "iso_disk": "CentOS-7-x86_64-DVD-1810.iso",
+    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso",
     "iso_checksum_type": "sha256",
-    "iso_checksum": "506e4e06abf778c3435b4e5745df13e79ebfc86565d7ea1e128067ef6b5a6345",
+    "iso_checksum": "6d44331cc4f6c506c7bbe9feb8468fad6c51a88ca1393ca6b8b486ea04bec3c1",
     "switch_name": "LANBridge",
-    "vlan_id": ""
+    "vlan_id": "",
+    "version": "1.0.0",
+    "user": "hauptj"
   }
 }
