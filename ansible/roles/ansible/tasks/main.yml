@@ -3,7 +3,7 @@
 # @Email:  josh@hauptj.com
 # @Filename: main.yml
 # @Last modified by:   HauptJ
-# @Last modified time: 07-Sept-2018
+# @Last modified time: 28-Apr-2019
 
 ---
   # Install Ansible
@@ -16,3 +16,8 @@
       - python-pip
       - ansible
     state: latest
+
+- name: Configure Ansible Hosts
+  copy:
+    src: files/hosts
+    dest: /etc/ansible/hosts

@@ -16,7 +16,7 @@
       "ssh_password": "vagrant",
       "ssh_timeout" : "4h",
       "shutdown_timeout": "30m",
-      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "shutdown_command": "shutdown -P now",
       "ram_size": 6144,
       "enable_mac_spoofing": "true",
       "enable_dynamic_memory": "false",
@@ -37,15 +37,15 @@
   ],
   "provisioners": [
     {
-      "type": "file",
-      "source": "scripts\/hosts",
-      "destination": "/tmp/hosts",
-      "pause_before": "10s"
-    },
-    {
       "type": "shell",
       "script": "scripts\/ansible.sh",
       "pause_before": "10s"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_dir": "ansible",
+      "playbook_file": "ansible\/provision.yml",
+      "extra_arguments": [ "--extra-vars \"--skip-tags \"ipv6, kimsurfi, restart, chef, virtualbox, vagrant\"" ]
     }
   ],
   "post-processors": [

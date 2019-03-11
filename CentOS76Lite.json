@@ -16,7 +16,7 @@
       "ssh_password": "vagrant",
       "ssh_timeout" : "4h",
       "shutdown_timeout": "30m",
-      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "shutdown_command": "shutdown -P now",
       "ram_size": 6144,
       "enable_mac_spoofing": "true",
       "enable_dynamic_memory": "false",
@@ -37,15 +37,15 @@
   ],
   "provisioners": [
     {
-      "type": "file",
-      "source": "scripts\/hosts",
-      "destination": "/tmp/hosts",
+      "type": "shell",
+      "script": "scripts\/ansible.sh",
       "pause_before": "10s"
     },
     {
-      "type": "shell",
-      "script": "scripts\/ansibleLite.sh",
-      "pause_before": "10s"
+      "type": "ansible-local",
+      "playbook_dir": "ansible",
+      "playbook_file": "ansible\/provision.yml",
+      "extra_arguments": [ "--skip-tags \"ipv6, kimsurfi, restart, chef, virtualbox, vagrant, terraform, gcloud, swarm, golang, python3, nodejs, ruby, mongodb\"" ]
     }
   ],
   "post-processors": [
@@ -62,14 +62,14 @@
     }
   ]
 ],
-"variables": {
-  "iso_disk": "CentOS-7-x86_64-DVD-1810.iso",
-  "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso",
-  "iso_checksum_type": "sha256",
-  "iso_checksum": "6d44331cc4f6c506c7bbe9feb8468fad6c51a88ca1393ca6b8b486ea04bec3c1",
-  "switch_name": "LANBridge",
-  "vlan_id": "",
-  "version": "1.0.1",
-  "user": "hauptj"
-}
+  "variables": {
+    "iso_disk": "CentOS-7-x86_64-DVD-1810.iso",
+    "iso_url": "http://mirror.cogentco.com/pub/linux/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso",
+    "iso_checksum_type": "sha256",
+    "iso_checksum": "6d44331cc4f6c506c7bbe9feb8468fad6c51a88ca1393ca6b8b486ea04bec3c1",
+    "switch_name": "LANBridge",
+    "vlan_id": "",
+    "version": "1.0.3",
+    "user": "hauptj"
+  }
 }
