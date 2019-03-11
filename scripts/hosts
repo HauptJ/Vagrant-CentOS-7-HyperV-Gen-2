@@ -27,3 +27,17 @@ localhost
 [docker:vars]
 ansible_connection=local
 ansible_user=root
+
+[front-end]
+localhost
+
+[front-end:vars]
+ansible_connection=local
+ansible_user=root
+
+[kvm-node]
+localhost
+
+[kvm-node:vars]
+ansible_connection=local
+ansible_user=root
