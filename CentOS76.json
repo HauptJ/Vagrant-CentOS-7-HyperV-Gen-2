@@ -37,6 +37,18 @@
   ],
   "provisioners": [
     {
+      "type": "shell-local",
+      "environment_vars": ["SHELLLOCALTESTVAR=ShellTestVar"],
+      "execute_command": ["powershell.exe", "{{.Vars}} {{.Script}}"],
+      "env_var_format": "$env:%s=\"%s\"; ",
+      "script": "./scripts/archive_playbook.ps1"
+    },
+    {
+      "type": "file",
+      "source": "scripts\/playbook.tgz",
+      "destination": "/tmp/playbook.tgz"
+    },
+    {
       "type": "file",
       "source": "scripts\/hosts",
       "destination": "/tmp/hosts",
