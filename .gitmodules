@@ -1,6 +1,12 @@
-[submodule "roles/swarm"]
-	path = roles/swarm
+[submodule ".\\ansible\\roles\\swarm"]
+	path = .\\ansible\\roles\\swarm
 	url = https://github.com/HauptJ/ansible-role-docker.git
-[submodule "roles/git"]
-	path = roles/git
+[submodule ".\\ansible\\roles\\git"]
+	path = .\\ansible\\roles\\git
 	url = https://github.com/HauptJ/ansible-role-git.git
+[submodule ".\\ansible\\roles\\epel"]
+	path = .\\ansible\\roles\\epel
+	url = https://github.com/HauptJ/ansible-role-repo-epel.git
+[submodule ".\\ansible\\roles\\remi"]
+	path = .\\ansible\\roles\\remi
+	url = https://github.com/HauptJ/ansible-role-repo-remi.git

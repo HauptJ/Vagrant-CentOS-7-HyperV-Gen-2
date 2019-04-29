@@ -7,18 +7,4 @@ yum -y update
 
 
 # Install requirements for Ansible provisioning
-yum -y install \
-  ansible \
-  git \
-  wget
-
-# Copy Ansible inventory file
-cp /tmp/hosts /etc/ansible/hosts
-
-# Clone and run ansible playbook
-pushd /tmp/
-git clone https://github.com/HauptJ/Vagrant-CentOS-7-HyperV-Gen-2.git
-pushd Vagrant-CentOS-7-HyperV-Gen-2/
-ansible-playbook provision.yml --skip-tags "ipv6, kimsurfi, restart, chef, virtualbox, vagrant"
-popd
-popd
+yum -y install ansible
